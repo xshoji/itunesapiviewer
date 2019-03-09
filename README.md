@@ -9,6 +9,5 @@ iTunes api viewer sample based on lorca
 
 ```
 dep ensure
-
-go run gen.go; go build -o /tmp/app main.go assets.go; /tmp/./app
+sh updateAssetsgo.sh; go build -o /tmp/app; /tmp/./app
 ```

@@ -1,3 +1,9 @@
+#!/bin/sh
+
+GEN_GO="gen.go"
+trap "{ rm -f ${GEN_GO}; }" EXIT
+
+cat > ${GEN_GO} << EOF
 package main
 
 import "github.com/zserge/lorca"
@@ -7,3 +13,6 @@ func main() {
 	// generate manifests, or do other preparations for your assets.
 	lorca.Embed("assets.go", "resources")
 }
+EOF
+
+go run gen.go
