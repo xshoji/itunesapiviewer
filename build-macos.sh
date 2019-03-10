@@ -6,7 +6,7 @@ BASE_DIR=${DIR}/${APP}/Contents
 ICON=app.icns
 
 mkdir -p ${BASE_DIR}/{MacOS,Resources}
-go run gen.go
+sh update-assetsgo.sh
 go build -o ${BASE_DIR}/MacOS/${APP} main.go assets.go
 cat > ${BASE_DIR}/Info.plist << EOF
 <?xml version="1.0" encoding="UTF-8"?>
