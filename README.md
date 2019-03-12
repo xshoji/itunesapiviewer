@@ -14,7 +14,7 @@ dep ensure
 # run
 
 ```
-sh update-assetsgo.sh; go build -o /tmp/app; /tmp/./app
+sh update-assetsgo.sh; go run *.go
 ```
 
 # build
